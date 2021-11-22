@@ -1,7 +1,8 @@
 function publishPost() {
-    let text = document.getElementById('post-text').value
+    let postText = document.getElementById('post-text').value
     let postsFeed = document.getElementById('posts-feed')
-    postsFeed.insertAdjacentHTML('afterbegin', text + '<br>')
+    let postElem = '<div class="post-text">'+ postText + '</div>'
+    postsFeed.insertAdjacentHTML('afterbegin', postElem)
 }
 
 document.getElementById('publish-post').onclick = publishPost
